@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
+import Butom from '../src/components/butom';
 
 const CenterAlign = styled.div`
   text-align: center;
@@ -14,6 +15,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Butom/>
         <a
           className="App-link"
           href="https://reactjs.org"
