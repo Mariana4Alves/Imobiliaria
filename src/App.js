@@ -1,9 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+
+const CenterAlign = styled.div`
+  text-align: center;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <CenterAlign>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -15,10 +20,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+           React
         </a>
       </header>
-    </div>
+    </CenterAlign>
   );
 }
 
