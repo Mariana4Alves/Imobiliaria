@@ -1,46 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 import styled from 'styled-components';
-import Butom from '../src/components/butom';
 import HouseCard from './components/HouseCard';
+import Header from './components/Header';
 
 const CenterAlign = styled.div`
   text-align: center;
-  background: #f1f1f1;
+  background: rgba( 232, 241, 242, 0.4);
+  padding: 8%;
+`;
+
+const Body = styled.body`
+  text-align: center;
 `;
 
 function App() {
+  const [indexHover, setIndexHover] = useState(0);
+
   return (
     <CenterAlign>
-      <HouseCard priceText={'10.0000'}
-        title={'Residence'}
-        subtitle={'Kansas, UF'}
-        bedQuantity={'4'}
-        bathQuantity={'2'}
-        size={'123'}
-        href={'https://www.teclasap.com.br/wp-content/uploads/2009/09/house-1.jpg'} />
-         <HouseCard priceText={'10.0000'}
-        title={'Residence'}
-        subtitle={'Kansas, UF'}
-        bedQuantity={'4'}
-        bathQuantity={'2'}
-        size={'123'}
-        href={'https://www.teclasap.com.br/wp-content/uploads/2009/09/house-1.jpg'} />
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Butom />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          React
-        </a>
+        <Header url="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" setIndexHover={setIndexHover} indexHover={indexHover} buttons={['Contatenos', 'Sobre', 'Casas']} onPressRadiusButton={() => null} />
       </header>
+      <Body>
+        <HouseCard priceText={'10.0000'}
+          title={'Residence'}
+          subtitle={'Kansas, UF'}
+          bedQuantity={'4'}
+          bathQuantity={'2'}
+          size={'123'}
+          href={'https://www.teclasap.com.br/wp-content/uploads/2009/09/house-1.jpg'} />
+        <HouseCard priceText={'10.0000'}
+          title={'Residence'}
+          subtitle={'Kansas, UF'}
+          bedQuantity={'4'}
+          bathQuantity={'2'}
+          size={'123'}
+          href={'https://www.teclasap.com.br/wp-content/uploads/2009/09/house-1.jpg'} />
+      </Body>
     </CenterAlign>
   );
 }

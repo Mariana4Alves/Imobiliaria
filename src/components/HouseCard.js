@@ -9,10 +9,11 @@ const Container = styled.div`
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   width: 15%;
-  margin-left: 14%;
   padding: 8px;
   margin-bottom: 16px;
   margin-top: 16px;
+  -webkit-box-shadow: 0px 0px 16px -3px #999999; 
+  box-shadow: 0px 0px 16px -3px #999999;
 `;
 
 const Content = styled.div`
