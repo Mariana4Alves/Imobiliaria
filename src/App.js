@@ -1,31 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
-import Butom from '../src/components/butom';
+
+import { LoginProvider } from "./contexts/LoginContext";
+import PrincipalPage from './pages/PrincipalPage';
 
 const CenterAlign = styled.div`
   text-align: center;
+  background: rgba( 232, 241, 242, 0.4);
+  padding: 8%;
+  padding-top: 2%;
 `;
 
-function App() {
+function App() {  
   return (
-    <CenterAlign>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Butom/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-           React
-        </a>
-      </header>
-    </CenterAlign>
+    <LoginProvider>
+      <CenterAlign>
+       <PrincipalPage />
+      </CenterAlign>
+    </LoginProvider>
+
   );
 }
 
