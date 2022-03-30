@@ -7,6 +7,7 @@ const Container = styled.div`
   justify-content: space-between;
   display: flex;
   flex-direction: row;
+  align-items: center;
 `;
 
 const Pressable = styled.div`
@@ -18,7 +19,7 @@ const Title = styled.h3`
     font-family: 'Khula', sans-serif;
     color: rgb(146,146,146);
     margin-horizontal: 20%;
-
+    font-size: 14px;
     ${(props) => props.blue && `    color: rgb(34, 133, 253);
     `}
 `;
@@ -44,7 +45,7 @@ const Header = (
 
                 )
             })}
-            <RadiusButton title={'Clique aqui'} onPress={onPressRadiusButton} />
+            <RadiusButton title={'Entrar'} onPress={onPressRadiusButton} />
         </Container>
     );
 };
