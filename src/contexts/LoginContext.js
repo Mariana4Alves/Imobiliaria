@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 export const AuthContext = React.createContext();
 const LOCAL_STORAGE_USER = '@caresystem:user';
 
@@ -20,25 +20,6 @@ export function LoginProvider({ children }) {
     function updatePassword(password) {
         return currentUser.updatePassword(password)
     }
-
-    /* 
-   useEffect(() => {
-        const cancelAuthListener = firebase.auth().onIdTokenChanged((u) => {
-            setCurrentUser(u);
-            setLoading(false);
-        });
-        return () => cancelAuthListener();
-    }, []);
-    useEffect(() => {
-         const unsubscribe = onAuthStateChanged(auth, (user) => {
-             setCurrentUser(user)
-             setLoading(false)
-         });
- 
-         return () => {
-             unsubscribe();
-         };
-     }, [])*/
 
     const value = {
         currentUser,
