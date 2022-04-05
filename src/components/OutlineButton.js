@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-    padding: 12px;
+    padding: 6px 20px;
     height: 22px;
     text-align: center;
     align-items: center;
     border-radius: 40px;
-    border-top-right-radius: 0;
-    background: rgb(34, 133, 253);
-    color: #fff; 
+    border-color: rgb(34, 133, 253);
+    border-width: 2px;
+    border-style: solid;
+    color: rgb(34, 133, 253); 
     cursor: pointer;
-    ${(props) => props.fullRadius && `    border-radius: 40px;
-    `}
+    width: fit-content;
 `;
 
 const Title = styled.h3`
@@ -21,9 +21,9 @@ const Title = styled.h3`
     font-size: 14px;
 `;
 
-const RadiusButton = ({ onPress, title, fullRadius }) => {
+const OutlineButton = ({ onPress, title }) => {
     return (
-        <Container onClick={() => onPress()} fullRadius={fullRadius}>
+        <Container onClick={() => onPress()}>
             <Title>
                 {title}
             </Title>
@@ -31,4 +31,4 @@ const RadiusButton = ({ onPress, title, fullRadius }) => {
     )
 }
 
-export default RadiusButton;
+export default OutlineButton;
