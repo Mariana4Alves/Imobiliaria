@@ -49,7 +49,7 @@ const HomePage = ({ hasBeenAutenticated }) => {
                     <Dropdown title={'Cidade'} options={[{ title: 'option 1', onClick: () => null }, { title: 'option 2', onClick: () => null }, { title: 'option 3', onClick: () => null }, { title: 'option 4', onClick: () => null }]} />
                     <Dropdown title={'Cidade'} options={[{ title: 'option 1', onClick: () => null }, { title: 'option 2', onClick: () => null }, { title: 'option 3', onClick: () => null }, { title: 'option 4', onClick: () => null }]} />
 <Space />
-                <OutlineButton title={'Teste'} onClick={() => null} />
+                <OutlineButton title={'Teste'} onPress={() => null} />
             </Flex>
         </Body>
     )

@@ -1,8 +1,10 @@
 import './App.css';
 import styled from 'styled-components';
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { LoginProvider } from "./contexts/LoginContext";
 import PrincipalPage from './pages/PrincipalPage';
+import Login from './pages/Login';
+import PrivateRoute from './routes/PrivateRoute';
 
 const CenterAlign = styled.div`
   text-align: center;
@@ -11,13 +13,25 @@ const CenterAlign = styled.div`
   padding-top: 2%;
 `;
 
-function App() {  
+function App() {
   return (
-    <LoginProvider>
-      <CenterAlign>
-       <PrincipalPage />
-      </CenterAlign>
-    </LoginProvider>
+    <div>
+      <Router>
+        <LoginProvider>
+          <Switch>
+
+            <CenterAlign>
+              <PrivateRoute exact path="/" component={PrincipalPage} />
+              <Route path="/login" component={Login} />
+            </CenterAlign>
+          </Switch>
+
+        </LoginProvider>
+
+
+      </Router>
+    </div>
+
 
   );
 }
